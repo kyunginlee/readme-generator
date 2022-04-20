@@ -81,7 +81,33 @@ const questions = [
         message: "Choose your license",
         choices: ['mit', 'agpl', 'apache', 'no license'],
         name: "license"
-    }
+    },
+    {
+        type: 'input',
+        name: 'githubUsername',
+        message: 'Your github username',
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log('*Github username required');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Your email',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('*Email required');
+                return false;
+            }
+        }
+    },
 ];
 
 // Generate README function using fs writeFile with promise error handling
@@ -109,18 +135,18 @@ const init = () => {
     })
 }
 
-
-inquirer
-  .prompt([
-      { type: 'list', message: ""}
-  ])
-  .then((answers) => {
-    // Use user feedback for... whatever!!
-  })
-  .catch((error) => {
-    if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
-    } else {
-      // Something else went wrong
-    }
-  });
+//Startup application 
+init()
+.then(userInput => {
+    console.log(userInput);
+    return generateReadme(userInput);
+})
+.then(outputMD => {
+    return writeFile(outputMD);
+})
+.then(writeFileResponse => {
+    console.log(writeFileResponse.message);
+})
+.catch(err => {
+    console.log(err);
+})
