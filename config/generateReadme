@@ -50,8 +50,43 @@ function contentsLicense(license) {
    function generateReadme(data) {
        return `
        # ${data.title}
-       <br>
        ##
        ${licenseBadge(data.license)}
-       `
+       ---
+       
+       ## Contents
+       * [Description](#description)
+       * [Installation](#install)
+       * [Usage](#usage)
+       * [Contributors](#contributor)
+       ${contentsLicense(data.license)}
+       * [Links](#links)
+       ---
+
+       ## [Description](#contents)
+       ${data.description}
+       ---
+
+       ## [Installation](#contents)
+       ${data.install}
+       ---
+       
+       ## [Usage](#usage)
+       ${data.usage}
+       ---
+
+       ## [Contributors](#contributor)
+       ${contributionResponse(data.contributor, data.contributorGuide)}
+       ---
+
+       ${licenseSection(data.license)}
+       ---
+
+       ## [Links](#links)
+       Feel free tocontact me here:
+       [Github](https://github.com/${data.githubUsername})
+       [Email: ${data.email}](mailto:$data.email})
+       `;
    }
+
+   module.exports = generateReadme;
