@@ -1,1 +1,57 @@
-//
+//When no contributors are required
+function contributionResponse(contributor, data) {
+    if (!contributor) {
+        return `No contributors ar this current time.`;
+    } else {
+        return `${data}`;
+    }
+}
+
+//Populates License badge corresponding to user choice
+function licenseBadge(license) {
+    if (license !=='none') {
+        return '![badge](https://img.shields.io/badge/license-${license}-blue)';
+    } else {
+        return ' ';
+    }
+}
+
+//Link to license type corresponding to user choice
+function licenseLink(license) {
+    if (license !== 'none') {
+    return `[${license}](https://choosealicense.com/licenses/${license})`;
+    } else {
+      return ' ';
+    }
+  }
+
+  //Place license link in contents 
+function contentsLicense(license) {
+    if (license !== 'none') {
+    return `
+    * [License](#license)
+      `;
+    } else {
+      return ' ';
+    }
+   }
+// Populate license section
+  function licenseSection(license) {
+    if (license !== 'none') {
+    return `
+    ## [License](#contents)
+    ${licenseLink(license)}`;
+    } else {
+      return ' ';
+    }
+   }
+
+   //Pull userinput data and populate into README shell content
+   function generateReadme(data) {
+       return `
+       # ${data.title}
+       <br>
+       ##
+       ${licenseBadge(data.license)}
+       `
+   }

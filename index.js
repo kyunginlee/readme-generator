@@ -67,7 +67,7 @@ const questions = [
     {
         type: 'input',
         message: "Include guide for contributors",
-        name: 'contributeGuide',
+        name: 'contributorGuide',
         when: ({ contributor}) => {
             if (contributor) {
                 return true;
@@ -79,7 +79,7 @@ const questions = [
     { 
         type: 'list', 
         message: "Choose your license",
-        choices: ['mit', 'agpl', 'apache', 'no license'],
+        choices: ['mit', 'agpl', 'apache', 'none'],
         name: "license"
     },
     {
