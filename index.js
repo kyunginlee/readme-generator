@@ -1,6 +1,6 @@
 // Packages required for application
 const inquirer = require('inquirer');
-const generateReadme = require('./config/generateReadme');
+const generateReadme = require('./utils/generateReadme');
 const axios = require('axios');
 const fs = require('fs')
 
