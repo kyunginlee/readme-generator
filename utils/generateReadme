@@ -1,0 +1,95 @@
+//When no contributors are required
+function contributionResponse(contributor, data) {
+    if (!contributor) {
+        return `No contributors ar this current time.`;
+    } else {
+        return `${data}`;
+    }
+}
+
+//Populates License badge corresponding to user choice
+function licenseBadge(license) {
+  if (license !== 'none') {
+  return `![${license}](https://img.shields.io/badge/license-${license}-blue)`;
+  } else {
+    return ' ';
+  }
+}
+
+//Link to license type corresponding to user choice
+function licenseLink(license) {
+  if (license !== 'none') {
+  return `[${license}](https://choosealicense.com/licenses/${license})<br>`;
+  } else {
+    return ' ';
+  }
+}
+
+  //Place license link in contents 
+function contentsLicense(license) {
+  if (license !== 'none') {
+  return `
+  * [License](#license)
+    `;
+  } else {
+    return ' ';
+  }
+}
+// Populate license section
+function licenseSection(license) {
+  if (license !== 'none') {
+  return `
+  ## [License](#contents)
+  ---
+  ${licenseLink(license)}`;
+  } else {
+    return ' ';
+  }
+}
+
+//Pull userinput data and populate into README shell content
+function generateReadme(data) {
+  return `
+  # ${data.title}
+
+  ## Contents
+  * [Description](#description)
+  * [Installation](#install)
+  * [Usage](#usage)
+  * [Contributors](#contributors)
+  ${contentsLicense(data.license)}
+  * [Links](#links)
+  ---
+
+  ## [Description](#contents)
+  ---
+  ${data.description}
+
+
+  ## [Installation](#contents)
+  ---
+  ${data.install}
+
+  
+  ## [Usage](#contents)
+  ---
+  ${data.usage}
+
+
+  ## [Contributors](#contents)
+  ---
+  ${contributionResponse(data.contributor, data.contributorGuide)}
+  
+  
+${licenseSection(data.license)}
+${licenseBadge(data.license)}
+
+  ## [Links](#contents)
+  ---
+  Feel free to contact me here:<br>
+  [Github: kyunginlee](https://github.com/${data.githubUsername})<br>
+  [Email: ${data.email}](mailto:$data.email})
+  `;
+}
+
+  module.exports = generateReadme;
