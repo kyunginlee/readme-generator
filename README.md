@@ -1,5 +1,4 @@
-
-  # Good readme generator
+ # Good readme generator
 
   ## Contents
   * [Description](#description)
@@ -43,4 +42,3 @@
   Feel free to contact me here:<br>
   [Github: kyunginlee](https://github.com/kyunginlee)<br>
   [Email: hello@jessica-lee.com.au](mailto:$data.email})
-  
