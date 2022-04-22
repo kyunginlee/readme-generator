@@ -39,10 +39,9 @@ https://user-images.githubusercontent.com/99236183/164577078-2ab8f426-7fb5-47ab-
 ![mit](https://img.shields.io/badge/license-mit-blue)
 
   ## [Links](#contents)
-  Feel free to contact me here:<br>
   Readme generator demo video:<br> 
   [https://vimeo.com/701865893](https://vimeo.com/701865893)
-
-
+  
+   Feel free to contact me here:<br>
   [Github: kyunginlee](https://github.com/kyunginlee)<br>
   [Email: hello@jessica-lee.com.au](mailto:$data.email})
