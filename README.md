@@ -19,7 +19,7 @@ https://user-images.githubusercontent.com/99236183/164577078-2ab8f426-7fb5-47ab-
 
   ## [Installation](#contents)
 
-  Download the zip file or clone to desired location from the repository link provided in the 'Links' section. On opening the file in your code editor, ensure you are in the root directory and open a new terminal. Type the command line’npm install’. Now you are set! Open an integrated terminal within the index.js file and type the command line 'node index.js’.
+  Download the zip file or clone to desired location from the repository link provided in the 'Links' section. On opening the file in your code editor, ensure you are in the root directory and open a new terminal. Type the command line’npm install’. Now you are set! Open an integrated terminal within the index.js file and type the command line 'node index.js’. On completing all questions and receiving response 'Readme Complete!' check the file inside the 'output' folder. The README.md should be populated with the users responses and be ready to use. 
 
   
   ## [Usage](#contents)
