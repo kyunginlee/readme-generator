@@ -25,12 +25,6 @@ https://user-images.githubusercontent.com/99236183/164577078-2ab8f426-7fb5-47ab-
   ## [Usage](#contents)
 
   The Readme generator is generally for use by developers and students working on web development projects which require a brief summary of the project as well as it's functionalities to bring its users up to speed.
-
-
-  ## [Contributors](#contents)
-
-  No contributors ar this current time.
-  
   
 
   ## [License](#contents)
